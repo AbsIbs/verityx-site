@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <section
-        id="#hero"
+        id="hero"
         className="h-[calc(100vh-64px)] flex justify-center bg-black"
       >
         <Image
@@ -48,7 +48,11 @@ export default function Home() {
                 SEO, social media & analytics. Get found, get engaged, get
                 results. Dominate search & Maximize reach.
               </p>
-              <Link href={''} className="bg-primary flex items-center justify-center w-fit px-8 py-4 rounded-full">
+              <Link
+                href={"#about"}
+                scroll={true}
+                className="bg-primary flex items-center justify-center w-fit px-8 py-4 rounded-full"
+              >
                 <p className="text-white">Learn more</p>
               </Link>
             </div>
@@ -58,46 +62,37 @@ export default function Home() {
             {/* Copyright */}
             <div className="flex flex-col gap-1">
               <p className="text-on-bg self-end">COMPANY NAME</p>
-              <p className="text-secondary-text-on-BG">© 2024 Company Name</p>
+              <p className="text-secondary-text-on-bg">© 2024 Company Name</p>
             </div>
             {/* Email */}
             <div className="flex flex-col gap-1">
               <p className="text-on-bg self-end">EMAIL</p>
-              <p className="text-secondary-text-on-BG">email@company.com</p>
+              <p className="text-secondary-text-on-bg">email@company.com</p>
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <div className="flex flex-col gap-20">
-          <p className="text-white">hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
-          <p>hello world</p>
+      <section
+        id="about"
+        className="h-screen flex items-center justify-center"
+      >
+        <div className="flex flex-col gap-4 w-[1280px] px-[20px]">
+          <div className="flex flex-row gap-2 items-center">
+            <div className="h-[2px] w-6 bg-secondary-text-on-bg" />
+            <p className="text-secondary-text-on-bg text-lg tracking-widest">
+              WHAT WE STAND FOR
+            </p>
+          </div>
+          <p className="text-on-bg text-3xl leading-[150%]">
+            We're obsessed with unlocking your digital potential, and we refuse
+            to settle for mediocrity. We're a passionate team of experts,
+            collaborating to craft winning digital strategies that go above and
+            beyond. Our mission is to{" "}
+            <span className="text-primary">empower you to thrive online, </span>
+            and we achieve this by continuously refining our craft, staying
+            ahead of industry trends, and delivering results that shatter
+            expectations.
+          </p>
         </div>
       </section>
     </main>

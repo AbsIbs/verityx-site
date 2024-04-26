@@ -24,9 +24,9 @@ module.exports = {
         light: {
           layout: {},
           colors: {
-            BG: "#1e1d1f",
+            bg: "#1e1d1f",
             "on-bg": "#f1f1f1",
-            "secondary-text-on-BG": "#CCC",
+            "secondary-text-on-bg": "#CCC",
             "on-bg-light": "#333",
             primary: "#E9204F",
             surface: "#0f0f0f",

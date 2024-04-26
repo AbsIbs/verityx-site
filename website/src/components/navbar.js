@@ -46,7 +46,7 @@ export default function NavbarComponent() {
                     <Link
                       href={"#"}
                       key={index}
-                      className="text-secondary-text-on-BG hover:text-on-bg"
+                      className="text-secondary-text-on-bg hover:text-on-bg"
                     >
                       {item}
                     </Link>
@@ -66,7 +66,7 @@ export default function NavbarComponent() {
             </NavbarContent>
           </div>
           {/* Responsive */}
-          <NavbarMenu className="bg-BG gap-8">
+          <NavbarMenu className="bg-bg gap-8">
             {menuItems.map((item, index) => (
               <NavbarMenuItem key={index}>
                 <Link href={"#"} key={index} className="text-on-bg">
