@@ -5,7 +5,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 // Components
-import Navbar from "@/components/navbar";
+import NavbarComponent from "@/components/navbar";
 
 // Fonts
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <Providers>
-          <Navbar />
+          <NavbarComponent />
           {children}
         </Providers>
       </body>

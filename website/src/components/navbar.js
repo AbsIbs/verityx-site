@@ -18,13 +18,14 @@ export default function NavbarComponent() {
   const cta = "Let's talk";
 
   return (
-    <div className=" flex justify-center">
-      <div className="flex flex-row w-[1920px] justify-center">
-        <Navbar
-          onMenuOpenChange={setIsMenuOpen}
-          maxWidth="full"
-          className="bg-BG"
-        >
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="full"
+      className="bg-transparent"
+      isBlurred="true"
+    >
+      <div className="flex justify-center w-full">
+        <div className="flex justify-between w-[1920px]">
           {/* Left side */}
           <NavbarContent>
             {/* Toggle button */}
@@ -33,7 +34,6 @@ export default function NavbarComponent() {
               className="sm:hidden text-white"
             />
             <NavbarBrand>
-              {/* <AcmeLogo /> */}
               <p className="font-bold text-white">LOGO</p>
             </NavbarBrand>
           </NavbarContent>
@@ -65,17 +65,6 @@ export default function NavbarComponent() {
               </NavbarItem>
             </NavbarContent>
           </div>
-
-          {/*           <NavbarContent justify="end">
-            <NavbarItem>
-              <Link
-                href={"#"}
-                className=" px-4 py-2 bg-primary text-on-bg rounded"
-              >
-                {cta}
-              </Link>
-            </NavbarItem>
-          </NavbarContent> */}
           {/* Responsive */}
           <NavbarMenu className="bg-BG gap-8">
             {menuItems.map((item, index) => (
@@ -86,8 +75,8 @@ export default function NavbarComponent() {
               </NavbarMenuItem>
             ))}
           </NavbarMenu>
-        </Navbar>
+        </div>
       </div>
-    </div>
+    </Navbar>
   );
 }
