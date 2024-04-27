@@ -3,7 +3,14 @@ import Link from "next/link";
 
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
+import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import ExploreIcon from "@mui/icons-material/Explore";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import FindReplaceIcon from "@mui/icons-material/FindReplace";
+import ScienceIcon from "@mui/icons-material/Science";
+import InsightsIcon from "@mui/icons-material/Insights";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
 
 // Images
 import Image from "next/image";
@@ -26,16 +33,21 @@ export default function Home() {
   };
 
   const icons = {
-    CodeIcon: <CodeIcon sx={{ color: "white" }} fontSize="inherit" />,
-    DesignServicesIcon: (
-      <DesignServicesIcon sx={{ color: "white" }} fontSize="inherit" />
-    ),
+    webDev: <CodeIcon sx={{ color: "white" }} fontSize="inherit" />,
+    bespoke: <DeveloperModeIcon sx={{ color: "white" }} fontSize="inherit" />,
+    UI: <DesignServicesIcon sx={{ color: "white" }} fontSize="inherit" />,
+    UX: <ExploreIcon sx={{ color: "white" }} fontSize="inherit" />,
+    branding: <VerifiedIcon sx={{ color: "white" }} fontSize="inherit" />,
+    seo: <FindReplaceIcon sx={{ color: "white" }} fontSize="inherit" />,
+    ml: <ScienceIcon sx={{ color: "white" }} fontSize="inherit" />,
+    data: <InsightsIcon sx={{ color: "white" }} fontSize="inherit" />,
+    consulting: <LightbulbIcon sx={{ color: "white" }} fontSize="inherit" />,
   };
 
   const WhatWeDo = (props) => {
     return (
-      <div className="flex flex-col gap-2 bg-surface p-4 rounded hover:bg-primary">
-        <div className="text-[50px]">{icons[props.icon]}</div>
+      <div className="flex flex-col gap-4 bg-surface p-8 rounded hover:bg-primary">
+        <div className="text-5xl">{icons[props.icon]}</div>
         <div className="flex flex-col">
           <p className="text-on-bg text-2xl">{props.title}</p>
           <p className="text-secondary-text-on-bg">{props.desc}</p>
@@ -189,43 +201,43 @@ export default function Home() {
             <WhatWeDo
               title="Web Development"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"webDev"}
             />
             <WhatWeDo
               title="Bespoke Apps"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"bespoke"}
             />
             <WhatWeDo
               title="UI Design"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"UI"}
             />
             <WhatWeDo
               title="UX Research"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"UX"}
             />
             <WhatWeDo
               title="Branding"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"branding"}
             />
             <WhatWeDo
               title="Machine Learning & AI"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"ml"}
             />
             <WhatWeDo
               title="Data & Analytics"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"data"}
             />
-            <WhatWeDo title="SEO" desc={"My description"} icon={"CodeIcon"} />
+            <WhatWeDo title="SEO" desc={"My description"} icon={"seo"} />
             <WhatWeDo
               title="Consulting"
               desc={"My description"}
-              icon={"CodeIcon"}
+              icon={"consulting"}
             />
           </div>
         </div>
