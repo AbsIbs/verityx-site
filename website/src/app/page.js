@@ -16,6 +16,16 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import Image from "next/image";
 import heroImage from "../../public/hero-image.jpg";
 import illustration from "../../public/illustration.svg";
+import cssIcon from "../../public/CSS3.png";
+import figmaIcon from "../../public/figma.png";
+import htmlIcon from "../../public/Html 5.png";
+import jsIcon from "../../public/JavaScript.png";
+import nextIcon from "../../public/Nextjs.png";
+import nodeIcon from "../../public/Nodejs.png";
+import pythonIcon from "../../public/Python.png";
+import reactIcon from "../../public/React.png";
+import tailwindIcon from "../../public/Tailwind CSS.png";
+import webflowIcon from "../../public/Webflow.png";
 
 export default function Home() {
   const Process = (props) => {
@@ -55,6 +65,19 @@ export default function Home() {
       </div>
     );
   };
+
+  const stackIcons = [
+    htmlIcon,
+    cssIcon,
+    jsIcon,
+    tailwindIcon,
+    nodeIcon,
+    reactIcon,
+    nextIcon,
+    pythonIcon,
+    webflowIcon,
+    figmaIcon,
+  ];
 
   return (
     <main>
@@ -208,16 +231,8 @@ export default function Home() {
               desc={"My description"}
               icon={"bespoke"}
             />
-            <WhatWeDo
-              title="UI Design"
-              desc={"My description"}
-              icon={"UI"}
-            />
-            <WhatWeDo
-              title="UX Research"
-              desc={"My description"}
-              icon={"UX"}
-            />
+            <WhatWeDo title="UI Design" desc={"My description"} icon={"UI"} />
+            <WhatWeDo title="UX Research" desc={"My description"} icon={"UX"} />
             <WhatWeDo
               title="Branding"
               desc={"My description"}
@@ -239,6 +254,20 @@ export default function Home() {
               desc={"My description"}
               icon={"consulting"}
             />
+          </div>
+        </div>
+      </section>
+      <section className="py-48 bg-surface flex items-center justify-center">
+        <div className="flex flex-col gap-12 items-center justify-center w-[1280px]">
+          <div className="flex flex-col gap-2 items-center ">
+            <p className="text-4xl text-on-bg">Our Stack</p>
+            <p className="text-secondary-text-on-bg">Lorem ipsum</p>
+          </div>
+
+          <div className="flex flex-row flex-wrap gap-16 items-center justify-center ">
+            {stackIcons.map((icon, index) => (
+              <Image key={index} src={icon} />
+            ))}
           </div>
         </div>
       </section>
