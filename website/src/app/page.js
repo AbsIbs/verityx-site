@@ -1,6 +1,9 @@
 // NextJS
 import Link from "next/link";
 
+// Component
+import WorkPreview from "@/components/workPreview";
+
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
@@ -218,8 +221,8 @@ export default function Home() {
         <div className="w-[1280px] justify-center flex flex-row gap-24 px-6">
           {/* Sticky title */}
           <div className="sticky h-full top-16 flex flex-col gap-4 flex-1">
-            <p className="text-secondary-text-on-bg text-lg">
-              What makes us different?
+            <p className="text-secondary-text-on-bg tracking-widest">
+              WHAT MAKES US DIFFERENT?
             </p>
             <p className="text-on-bg text-5xl leading-[125%] font-bold">
               We offer a robust set of services to our clients{" "}
@@ -280,7 +283,27 @@ export default function Home() {
         </div>
       </section>
       <section className="flex items-center justify-center py-48 bg-bg">
-        <div className="flex w-[1280px] px-6 gap-24">{/* Header */}</div>
+        <div className="flex flex-col w-[1280px] px-6 gap-24">
+          {/* Header */}
+          <div className="flex flex-col gap-2 flex-1">
+            <p className="text-secondary-text-on-bg tracking-widest">
+              THE LATEST AND GREATEST
+            </p>
+            <p className="text-on-bg text-5xl leading-[125%] font-bold">
+              Our Works <span className="text-primary">.</span>
+            </p>
+          </div>
+          {/* Works */}
+          <WorkPreview
+            title={"Pulse Poetry"}
+            caseStudy={false}
+            webAddress={"http://www.pulsePoetry.com"}
+            work={["UX Research", "UI Design", "Development"]}
+            platform={["Desktop", "Mobile"]}
+            status={"Ongoing"}
+            overview="Lorem ipsum dolor sit amet consectetur. Neque amet convallis ultrices ac. Imperdiet iaculis tincidunt imperdiet egestas elit leo vivamus et. Morbi nam sed proin nibh orci sed laoreet aliquam. Non nisl lorem turpis facilisis pellentesque."
+          />
+        </div>
       </section>
     </main>
   );
