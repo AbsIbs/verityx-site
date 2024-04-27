@@ -1,6 +1,10 @@
 // NextJS
 import Link from "next/link";
 
+// Material UI
+import CodeIcon from "@mui/icons-material/Code";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+
 // Images
 import Image from "next/image";
 import heroImage from "../../public/hero-image.jpg";
@@ -16,6 +20,25 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           <p className="text-on-bg-light text-3xl">{props.title}</p>
           <p className="text-on-bg-light">{props.desc}</p>
+        </div>
+      </div>
+    );
+  };
+
+  const icons = {
+    CodeIcon: <CodeIcon sx={{ color: "white" }} fontSize="inherit" />,
+    DesignServicesIcon: (
+      <DesignServicesIcon sx={{ color: "white" }} fontSize="inherit" />
+    ),
+  };
+
+  const WhatWeDo = (props) => {
+    return (
+      <div className="flex flex-col gap-2 bg-surface p-4 rounded hover:bg-primary">
+        <div className="text-[50px]">{icons[props.icon]}</div>
+        <div className="flex flex-col">
+          <p className="text-on-bg text-2xl">{props.title}</p>
+          <p className="text-secondary-text-on-bg">{props.desc}</p>
         </div>
       </div>
     );
@@ -159,15 +182,51 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex items-center justify-center bg-surface py-48">
-        <div className="w-[1280px] items-center justify-center flex flex-col gap-24 px-6">
-          {/* Header */}
-          <div className="flex flex-col items-center justify-center gap-6">
-            <p className="text-on-bg text-5xl">What we do</p>
-            <p className="text-on-bg text-lg text-center">
-              Lorem ipsum dolor sit amet consectetur. Neque metus varius orci
-              mattis eu nunc pellentesque.
-            </p>
+      <section className="flex items-center justify-center bg-bg py-48">
+        <div className="w-[1280px] justify-center flex flex-col gap-24 px-6">
+          {/* Grid */}
+          <div className="flex-1 grid grid-cols-3 gap-4 ">
+            <WhatWeDo
+              title="Web Development"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="Bespoke Apps"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="UI Design"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="UX Research"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="Branding"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="Machine Learning & AI"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo
+              title="Data & Analytics"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
+            <WhatWeDo title="SEO" desc={"My description"} icon={"CodeIcon"} />
+            <WhatWeDo
+              title="Consulting"
+              desc={"My description"}
+              icon={"CodeIcon"}
+            />
           </div>
         </div>
       </section>
