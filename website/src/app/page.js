@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // Component
 import WorkPreview from "@/components/workPreview";
+import FAQ from "@/components/faq";
 
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
@@ -81,6 +82,8 @@ export default function Home() {
     webflowIcon,
     figmaIcon,
   ];
+
+  const defaultContent = "Lorem Ipsum";
 
   return (
     <main>
@@ -283,7 +286,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex items-center justify-center py-48 bg-bg">
-        <div className="flex flex-col w-[1280px] px-6 gap-24">
+        <div className="flex flex-col w-[1280px] px-6 gap-48">
           {/* Header */}
           <div className="flex flex-col gap-2 flex-1">
             <p className="text-secondary-text-on-bg tracking-widest">
@@ -303,6 +306,45 @@ export default function Home() {
             status={"Ongoing"}
             overview="Lorem ipsum dolor sit amet consectetur. Neque amet convallis ultrices ac. Imperdiet iaculis tincidunt imperdiet egestas elit leo vivamus et. Morbi nam sed proin nibh orci sed laoreet aliquam. Non nisl lorem turpis facilisis pellentesque."
           />
+          <WorkPreview
+            title={"TDM"}
+            caseStudy={false}
+            webAddress={"http://www.pulsePoetry.com"}
+            work={["UX Research", "UI Design", "Development"]}
+            platform={["Desktop", "Mobile"]}
+            status={"Ongoing"}
+            overview="Lorem ipsum dolor sit amet consectetur. Neque amet convallis ultrices ac. Imperdiet iaculis tincidunt imperdiet egestas elit leo vivamus et. Morbi nam sed proin nibh orci sed laoreet aliquam. Non nisl lorem turpis facilisis pellentesque."
+          />
+          <WorkPreview
+            title={"Dishdelve"}
+            caseStudy={false}
+            webAddress={"http://www.pulsePoetry.com"}
+            work={["UX Research", "UI Design", "Development"]}
+            platform={["Desktop", "Mobile"]}
+            status={"Ongoing"}
+            overview="Lorem ipsum dolor sit amet consectetur. Neque amet convallis ultrices ac. Imperdiet iaculis tincidunt imperdiet egestas elit leo vivamus et. Morbi nam sed proin nibh orci sed laoreet aliquam. Non nisl lorem turpis facilisis pellentesque."
+          />
+        </div>
+      </section>
+      <section className="flex items-center justify-center py-48 bg-surface">
+        <div className="flex flex-row gap-32 px-4">
+          {/* Left side */}
+          <div className="flex flex-col flex-1 gap-6">
+            <p className="text-secondary-text-on-bg tracking-widest">
+              WE'RE HERE TO HELP
+            </p>
+            <p className="text-on-bg text-5xl leading-normal">
+              Frequently Asked Questions <span className="text-primary">.</span>
+            </p>
+            <p className="text-on-bg text-lg leading-normal">
+              If you have any other questions, feel free to shoot us a message!
+            </p>
+            <p className="text-primary font-medium text-lg">Get in touch.</p>
+          </div>
+          {/* Right side */}
+          <div className="flex-1">
+            <FAQ />
+          </div>
         </div>
       </section>
     </main>
