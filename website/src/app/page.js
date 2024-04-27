@@ -57,7 +57,7 @@ export default function Home() {
   const WhatWeDo = (props) => {
     return (
       <div className="flex flex-col gap-4 bg-surface p-8 rounded hover:bg-primary">
-        <div className="text-5xl">{icons[props.icon]}</div>
+        <div className="text-6xl">{icons[props.icon]}</div>
         <div className="flex flex-col">
           <p className="text-on-bg text-2xl">{props.title}</p>
           <p className="text-secondary-text-on-bg">{props.desc}</p>
@@ -95,7 +95,7 @@ export default function Home() {
           style={{
             objectFit: "cover",
             zIndex: 0,
-            opacity: "35%",
+            opacity: "15%",
           }}
         />
         <div className="w-[1920px] h-full flex flex-col px-6 py-6 z-10">
@@ -110,12 +110,9 @@ export default function Home() {
                   BUILDING BRANDS
                 </p>
               </div>
-              <p className="text-on-bg text-6xl font-medium leading-[125%]">
-                We build stunning websites and drive traffic.
-              </p>
-              <p className="text-on-bg text-[21px] leading-[150%]">
-                SEO, social media & analytics. Get found, get engaged, get
-                results. Dominate search & Maximize reach.
+              <p className="text-on-bg font-bold text-6xl leading-[125%]">
+                We build stunning websites and drive traffic{" "}
+                <span className="text-primary">.</span>
               </p>
               <Link
                 href={"#aboutUs"}
@@ -218,9 +215,19 @@ export default function Home() {
         </div>
       </section>
       <section className="flex items-center justify-center bg-bg py-48">
-        <div className="w-[1280px] justify-center flex flex-col gap-24 px-6">
+        <div className="w-[1280px] justify-center flex flex-row gap-24 px-6">
+          {/* Sticky title */}
+          <div className="sticky h-full top-16 flex flex-col gap-4 flex-1">
+            <p className="text-secondary-text-on-bg text-lg">
+              What makes us different?
+            </p>
+            <p className="text-on-bg text-5xl leading-[125%] font-bold">
+              We offer a robust set of services to our clients{" "}
+              <span className="text-primary">.</span>
+            </p>
+          </div>
           {/* Grid */}
-          <div className="flex-1 grid grid-cols-3 gap-4 ">
+          <div className="flex-2 grid grid-cols-2 gap-4 ">
             <WhatWeDo
               title="Web Development"
               desc={"My description"}
@@ -260,16 +267,20 @@ export default function Home() {
       <section className="py-48 bg-surface flex items-center justify-center">
         <div className="flex flex-col gap-12 items-center justify-center w-[1280px]">
           <div className="flex flex-col gap-2 items-center ">
-            <p className="text-4xl text-on-bg">Our Stack</p>
+            <p className="text-5xl font-bold text-on-bg">
+              Our Stack <span className="text-primary">.</span>
+            </p>
             <p className="text-secondary-text-on-bg">Lorem ipsum</p>
           </div>
-
           <div className="flex flex-row flex-wrap gap-16 items-center justify-center ">
             {stackIcons.map((icon, index) => (
               <Image key={index} src={icon} />
             ))}
           </div>
         </div>
+      </section>
+      <section className="flex items-center justify-center py-48 bg-bg">
+        <div className="flex w-[1280px] px-6 gap-24">{/* Header */}</div>
       </section>
     </main>
   );

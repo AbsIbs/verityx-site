@@ -23,6 +23,7 @@ export default function NavbarComponent() {
       maxWidth="full"
       className="bg-transparent"
       isBlurred="true"
+      shouldHideOnScroll
     >
       <div className="flex justify-center w-full">
         <div className="flex justify-between w-[1920px]">
