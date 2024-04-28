@@ -34,6 +34,7 @@ import reactIcon from "../../public/React.png";
 import tailwindIcon from "../../public/Tailwind CSS.png";
 import webflowIcon from "../../public/Webflow.png";
 import scheduleCall from "../../public/scheduleCall.jpg";
+import logo from "../../public/logo-with-background.png";
 
 export default function Home() {
   const Process = (props) => {
@@ -152,23 +153,29 @@ export default function Home() {
         id="aboutUs"
         className="h-screen flex items-center justify-center"
       >
-        <div className="flex flex-col gap-4 w-[1280px] px-6">
-          <div className="flex flex-row gap-2 items-center">
-            <div className="h-[2px] w-6 bg-secondary-text-on-bg" />
-            <p className="text-secondary-text-on-bg text-lg tracking-widest">
-              WHAT WE STAND FOR
-            </p>
+        <div className="flex flex-row gap-4 w-[1280px] px-6">
+          <div className="flex flex-row gap-16 items-center">
+            <div className="flex flex-col flex-1 gap-8">
+              <p className="text-on-bg font-bold text-5xl leading-normal">
+                Trusted by clients worldwide <span className="text-primary">.</span>
+              </p>
+              <p className="text-on-bg text-2xl leading-[150%]">
+                We're obsessed with unlocking your digital potential, and we
+                refuse to settle for mediocrity. We're a passionate team of
+                experts, collaborating to craft winning digital strategies that
+                go above and beyond. Our mission is to{" "}
+                <span className="text-primary">
+                  empower you to thrive online,{" "}
+                </span>
+                and we achieve this by continuously refining our craft, staying
+                ahead of industry trends, and delivering results that shatter
+                expectations.
+              </p>
+            </div>
+            <div className="flex-1 ">
+              <Image src={logo} />
+            </div>
           </div>
-          <p className="text-on-bg text-3xl leading-[150%]">
-            We're obsessed with unlocking your digital potential, and we refuse
-            to settle for mediocrity. We're a passionate team of experts,
-            collaborating to craft winning digital strategies that go above and
-            beyond. Our mission is to{" "}
-            <span className="text-primary">empower you to thrive online, </span>
-            and we achieve this by continuously refining our craft, staying
-            ahead of industry trends, and delivering results that shatter
-            expectations.
-          </p>
         </div>
       </section>
       <section
