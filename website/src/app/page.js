@@ -5,6 +5,7 @@ import Link from "next/link";
 import WorkPreview from "@/components/workPreview";
 import FAQ from "@/components/faq";
 import ContactForm from "@/components/contactForm";
+import Footer from "@/components/footer";
 
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
@@ -393,6 +394,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
