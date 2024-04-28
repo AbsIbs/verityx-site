@@ -16,6 +16,7 @@ import FindReplaceIcon from "@mui/icons-material/FindReplace";
 import ScienceIcon from "@mui/icons-material/Science";
 import InsightsIcon from "@mui/icons-material/Insights";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import CallIcon from "@mui/icons-material/Call";
 
 // Images
 import Image from "next/image";
@@ -31,6 +32,7 @@ import pythonIcon from "../../public/Python.png";
 import reactIcon from "../../public/React.png";
 import tailwindIcon from "../../public/Tailwind CSS.png";
 import webflowIcon from "../../public/Webflow.png";
+import scheduleCall from "../../public/scheduleCall.jpg";
 
 export default function Home() {
   const Process = (props) => {
@@ -361,6 +363,34 @@ export default function Home() {
           </div>
           {/* Form */}
           <ContactForm />
+          {/* Book now */}
+          <div className="flex flex-row gap-24 bg-on-bg py-24 px-12 rounded">
+            <div className="flex flex-col gap-8 flex-1">
+              <div className="flex flex-col gap-2">
+                <p className="text-on-bg-light tracking-widest">CAN'T WAIT?</p>
+                <p className="text-5xl text-on-bg-light leading-tight font-bold">
+                  Schedule a quick 15 minute call{" "}
+                  <span className="text-primary">.</span>
+                </p>
+              </div>
+              <p className="text-on-bg-light leading-normal">
+                Lorem ipsum dolor sit amet consectetur. Neque amet convallis
+                ultrices ac. Imperdiet iaculis tincidunt imperdiet egestas elit
+                leo vivamus et. Morbi nam sed proin nibh orci sed laoreet
+                aliquam. Non nisl lorem turpis facilisis pellentesque
+              </p>
+              <Link
+                className="bg-primary flex gap-2 items-center justify-center rounded text-on-bg w-fit px-8 py-4"
+                href={""}
+              >
+                <p>Book a call</p>
+                <CallIcon sx={{ color: "white" }} />
+              </Link>
+            </div>
+            <div className="flex-1">
+              <Image src={scheduleCall} className="rounded" />
+            </div>
+          </div>
         </div>
       </section>
     </main>

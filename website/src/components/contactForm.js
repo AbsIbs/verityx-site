@@ -3,7 +3,7 @@ import { Input, Textarea } from "@nextui-org/react";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-20">
       {/* 1st Row */}
       <div className="flex gap-12">
         <Input
@@ -59,7 +59,7 @@ const ContactForm = () => {
         placeholder="What would you like to discuss?"
       />
       {/* Submit button */}
-      <button className="py-4 px-16 text-on-bg bg-primary rounded w-fit self-end">
+      <button className="py-3 px-6 text-on-bg bg-primary rounded w-fit self-end">
         Submit
       </button>
     </div>
