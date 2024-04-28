@@ -4,6 +4,7 @@ import Link from "next/link";
 // Component
 import WorkPreview from "@/components/workPreview";
 import FAQ from "@/components/faq";
+import ContactForm from "@/components/contactForm";
 
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
@@ -333,7 +334,7 @@ export default function Home() {
             <p className="text-secondary-text-on-bg tracking-widest">
               WE'RE HERE TO HELP
             </p>
-            <p className="text-on-bg text-5xl leading-normal">
+            <p className="text-on-bg text-5xl leading-normal font-bold">
               Frequently Asked Questions <span className="text-primary">.</span>
             </p>
             <p className="text-on-bg text-lg leading-normal">
@@ -345,6 +346,21 @@ export default function Home() {
           <div className="flex-1">
             <FAQ />
           </div>
+        </div>
+      </section>
+      <section className="py-48 bg-bg flex items-center justify-center">
+        <div className="flex flex-col w-[1280px] px-6 gap-32">
+          {/* Header */}
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-secondary-text-on-bg tracking-widest text-center">
+              READY TO ELEVATE YOUR COMPANY?
+            </p>
+            <p className="text-center text-5xl text-on-bg font-bold">
+              Let's work together <span className="text-primary">.</span>
+            </p>
+          </div>
+          {/* Form */}
+          <ContactForm />
         </div>
       </section>
     </main>
