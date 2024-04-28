@@ -1,6 +1,10 @@
 // NextJS
 import Link from "next/link";
 
+// Font
+import localFont from "next/font/local";
+import { Cedarville_Cursive } from "next/font/google";
+
 // Component
 import WorkPreview from "@/components/workPreview";
 import FAQ from "@/components/faq";
@@ -35,6 +39,14 @@ import tailwindIcon from "../../public/Tailwind CSS.png";
 import webflowIcon from "../../public/Webflow.png";
 import scheduleCall from "../../public/scheduleCall.jpg";
 import logo from "../../public/logo-with-background.png";
+
+// Font
+const cedarville_cursive = Cedarville_Cursive({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const scriptina = localFont({ src: "../static-fonts/scriptina.regular.ttf" });
 
 export default function Home() {
   const Process = (props) => {
@@ -87,8 +99,6 @@ export default function Home() {
     webflowIcon,
     figmaIcon,
   ];
-
-  const defaultContent = "Lorem Ipsum";
 
   return (
     <main>
@@ -155,9 +165,10 @@ export default function Home() {
       >
         <div className="flex flex-row gap-4 w-[1280px] px-6">
           <div className="flex flex-row gap-16 items-center">
-            <div className="flex flex-col flex-1 gap-8">
+            <div className="flex flex-col flex-1 gap-12">
               <p className="text-on-bg font-bold text-5xl leading-normal">
-                Trusted by clients worldwide <span className="text-primary">.</span>
+                Trusted by clients worldwide{" "}
+                <span className="text-primary">.</span>
               </p>
               <p className="text-on-bg text-2xl leading-[150%]">
                 We're obsessed with unlocking your digital potential, and we
@@ -170,6 +181,11 @@ export default function Home() {
                 and we achieve this by continuously refining our craft, staying
                 ahead of industry trends, and delivering results that shatter
                 expectations.
+              </p>
+              <p
+                className={`text-6xl font-bold text-on-bg ${scriptina.className}`}
+              >
+                Abass Ibrahim
               </p>
             </div>
             <div className="flex-1 ">
