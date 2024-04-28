@@ -10,6 +10,10 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
+import Image from "next/image";
+
+// Images
+import logo from "../../public/logo-primary.png";
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +39,9 @@ export default function NavbarComponent() {
               className="sm:hidden text-white"
             />
             <NavbarBrand>
-              <p className="font-bold text-white">LOGO</p>
+              <div className="flex items-center w-full h-[64px]">
+                <Image src={logo} height={32} />
+              </div>
             </NavbarBrand>
           </NavbarContent>
           {/* Items */}
