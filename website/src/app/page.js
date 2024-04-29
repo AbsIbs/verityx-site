@@ -45,19 +45,6 @@ import logo from "../../public/logo-with-background.png";
 const scriptina = localFont({ src: "../static-fonts/scriptina.regular.ttf" });
 
 export default function Home() {
-  const Process = (props) => {
-    return (
-      <div className="flex flex-col gap-8">
-        <div className="rounded-full flex items-center justify-center h-10 w-10 bg-primary">
-          <p className="text-white">{props.number}</p>
-        </div>
-        <div className="flex flex-col gap-4">
-          <p className="text-on-bg-light text-3xl">{props.title}</p>
-          <p className="text-on-bg-light">{props.desc}</p>
-        </div>
-      </div>
-    );
-  };
 
   const icons = {
     webDev: <CodeIcon sx={{ color: "white" }} fontSize="inherit" />,
@@ -157,7 +144,7 @@ export default function Home() {
       </section>
       <section
         id="aboutUs"
-        className="h-screen flex items-center justify-center"
+        className="h-screen flex items-center justify-center bg-surface"
       >
         <div className="flex flex-row gap-4 w-[1280px] px-6">
           <div className="flex flex-row gap-16 items-center">
@@ -194,8 +181,14 @@ export default function Home() {
         id="ourProcess"
         className="py-48 bg-on-bg flex items-center justify-center"
       >
-        <div className="w-[1280px] px-6 ">
-          <TimelineComponent />
+        <div className="w-[1280px] flex flex-col gap-16 px-6 ">
+          {/* Header */}
+          <p className="text-on-bg-light text-5xl leading-[125%] font-bold">
+            Our Process <span className="text-primary">.</span>
+          </p>
+          <div>
+            <TimelineComponent />
+          </div>
         </div>
       </section>
       <section className="flex items-center justify-center bg-bg py-48">

@@ -30,7 +30,7 @@ const TimelineComponent = () => {
       <div className="flex flex-row gap-12">
         {/* Step */}
         <div className="h-fit sticky top-4">
-          <p className="text-4xl text-on-bg-light w-12">{props.step}</p>
+          <p className="text-4xl text-on-bg-light w-12 font-medium">{props.step}</p>
         </div>
         {/* Description */}
         <TextBody title={props.title} desc={props.desc} />
@@ -53,6 +53,14 @@ const TimelineComponent = () => {
         {/* 2nd Entry */}
         <Entry
           step={"02"}
+          title={"Lorem Ipsum"}
+          desc={
+            "We're obsessed with unlocking your digital potential, and we refuse to settle for mediocrity. We're a passionate team of experts, collaborating to craft winning digital strategies that go above and beyond. Our mission is to empower you to thrive online, and we achieve this by continuously refining our craft, staying ahead of industry trends, and delivering results that shatter expectations."
+          }
+        />
+        {/* 3rd Entry */}
+        <Entry
+          step={"03"}
           title={"Lorem Ipsum"}
           desc={
             "We're obsessed with unlocking your digital potential, and we refuse to settle for mediocrity. We're a passionate team of experts, collaborating to craft winning digital strategies that go above and beyond. Our mission is to empower you to thrive online, and we achieve this by continuously refining our craft, staying ahead of industry trends, and delivering results that shatter expectations."
