@@ -10,6 +10,7 @@ import WorkPreview from "@/components/workPreview";
 import FAQ from "@/components/faq";
 import ContactForm from "@/components/contactForm";
 import Footer from "@/components/footer";
+import TimelineComponent from "@/components/timeline";
 
 // Material UI
 import CodeIcon from "@mui/icons-material/Code";
@@ -41,11 +42,6 @@ import scheduleCall from "../../public/scheduleCall.jpg";
 import logo from "../../public/logo-with-background.png";
 
 // Font
-const cedarville_cursive = Cedarville_Cursive({
-  subsets: ["latin"],
-  weight: "400",
-});
-
 const scriptina = localFont({ src: "../static-fonts/scriptina.regular.ttf" });
 
 export default function Home() {
@@ -198,53 +194,8 @@ export default function Home() {
         id="ourProcess"
         className="py-48 bg-on-bg flex items-center justify-center"
       >
-        <div className="w-[1280px] flex flex-col gap-24 px-6">
-          {/* Header */}
-          <div className="flex flex-col items-center justify-center gap-6">
-            <p className="text-on-bg-light text-5xl">Our Process</p>
-            <p className="text-on-bg-light text-lg text-center">
-              Lorem ipsum dolor sit amet consectetur. Cras morbi eget leo at
-              mollis eget leo tempor maecenas. Diam ultrices dui egestas
-              suspendisse tincidunt etiam nisl. Dis posuere egestas et libero.
-              Sapien neque diam gravida egestas proin consectetur cursus purus.
-            </p>
-          </div>
-          {/* Processes */}
-          <div className="flex flex-row gap-24">
-            <div className="flex-1">
-              <Image src={illustration} />
-            </div>
-            <div className="flex-1 grid grid-cols-2 gap-16">
-              <Process
-                number={1}
-                title={"Lorem Ipsum"}
-                desc={
-                  "Lorem ipsum dolor sit amet consectetur. Neque quis sed nec mauris fermentum tincidunt neque aliquam. Vel semper eleifend in phasellus."
-                }
-              />
-              <Process
-                number={2}
-                title={"Lorem Ipsum"}
-                desc={
-                  "Lorem ipsum dolor sit amet consectetur. Neque quis sed nec mauris fermentum tincidunt neque aliquam. Vel semper eleifend in phasellus."
-                }
-              />
-              <Process
-                number={3}
-                title={"Lorem Ipsum"}
-                desc={
-                  "Lorem ipsum dolor sit amet consectetur. Neque quis sed nec mauris fermentum tincidunt neque aliquam. Vel semper eleifend in phasellus."
-                }
-              />
-              <Process
-                number={4}
-                title={"Lorem Ipsum"}
-                desc={
-                  "Lorem ipsum dolor sit amet consectetur. Neque quis sed nec mauris fermentum tincidunt neque aliquam. Vel semper eleifend in phasellus."
-                }
-              />
-            </div>
-          </div>
+        <div className="w-[1280px] px-6 ">
+          <TimelineComponent />
         </div>
       </section>
       <section className="flex items-center justify-center bg-bg py-48">
