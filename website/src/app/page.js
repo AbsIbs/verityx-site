@@ -3,7 +3,6 @@ import Link from "next/link";
 
 // Font
 import localFont from "next/font/local";
-import { Cedarville_Cursive } from "next/font/google";
 
 // Component
 import WorkPreview from "@/components/workPreview";
@@ -27,9 +26,8 @@ import CallIcon from "@mui/icons-material/Call";
 // Images
 import Image from "next/image";
 import heroImage from "../../public/hero-image.jpg";
-import illustration from "../../public/illustration.svg";
 import cssIcon from "../../public/CSS3.png";
-import figmaIcon from "../../public/figma.png";
+import figmaIcon from "../../public/Figma.png";
 import htmlIcon from "../../public/Html 5.png";
 import jsIcon from "../../public/JavaScript.png";
 import nextIcon from "../../public/Nextjs.png";
@@ -37,15 +35,14 @@ import nodeIcon from "../../public/Nodejs.png";
 import pythonIcon from "../../public/Python.png";
 import reactIcon from "../../public/React.png";
 import tailwindIcon from "../../public/Tailwind CSS.png";
-import webflowIcon from "../../public/Webflow.png";
+import webflowIcon from "../../public/WebFlow.png";
 import scheduleCall from "../../public/scheduleCall.jpg";
 import logo from "../../public/logo-with-background.png";
 
 // Font
 const scriptina = localFont({ src: "../static-fonts/scriptina.regular.ttf" });
 
-export default function Home() {
-
+const Home = async () => {
   const icons = {
     webDev: <CodeIcon sx={{ color: "white" }} fontSize="inherit" />,
     bespoke: <DeveloperModeIcon sx={{ color: "white" }} fontSize="inherit" />,
@@ -364,4 +361,6 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+
+export default Home;
